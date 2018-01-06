@@ -1,12 +1,12 @@
-import { AngularMasonry } from './src/masonry';
-import { AngularMasonryBrickComponent } from './src/brick';
+import { AngularMasonryComponent } from './src/masonry.component';
+import { AngularMasonryBrickComponent } from './src/brick.component';
 
 export { MasonryModule } from './src/module';
-export { AngularMasonry } from './src/masonry';
-export { AngularMasonryBrickComponent } from './src/brick';
+export { AngularMasonryComponent } from './src/masonry.component';
+export { AngularMasonryBrickComponent } from './src/brick.component';
 export { MasonryOptions } from './src/masonry-options';
 
 export const MASONRY_DIRECTIVES = [
-    AngularMasonry,
+    AngularMasonryComponent,
     AngularMasonryBrickComponent
 ];
