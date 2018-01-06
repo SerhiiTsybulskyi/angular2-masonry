@@ -12,7 +12,7 @@ import {
 } from '@angular/core';
 
 // import * as masonry from 'masonry-layout';
-let masonry = require('masonry-layout');
+const masonry = require('masonry-layout');
 
 import { MasonryOptions } from './masonry-options';
 
@@ -21,9 +21,6 @@ import { MasonryOptions } from './masonry-options';
     template: '<ng-content></ng-content>'
 })
 export class AngularMasonry implements OnInit, OnDestroy {
-
-    constructor(private _element: ElementRef) {}
-
     public _msnry: any;
     // private _imagesLoaded = null;
 
@@ -34,6 +31,8 @@ export class AngularMasonry implements OnInit, OnDestroy {
     // Outputs
     @Output() layoutComplete: EventEmitter<any[]> = new EventEmitter<any[]>();
     @Output() removeComplete: EventEmitter<any[]> = new EventEmitter<any[]>();
+
+    constructor(private _element: ElementRef) {}
 
     ngOnInit() {
         /// TODO: How to load imagesloaded only if this.useImagesLoaded===true?
@@ -108,8 +107,7 @@ export class AngularMasonry implements OnInit, OnDestroy {
             });
 
             this._element.nativeElement.removeChild(element);
-        }
-        else {
+        } else {
             // Tell Masonry that a child element has been added
             this._msnry.appended(element);
 
