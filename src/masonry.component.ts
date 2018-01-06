@@ -20,7 +20,7 @@ import { MasonryOptions } from './masonry-options';
     selector: 'ngx-masonry',
     template: '<ng-content></ng-content>'
 })
-export class AngularMasonry implements OnInit, OnDestroy {
+export class AngularMasonryComponent implements OnInit, OnDestroy {
     public _msnry: any;
     // private _imagesLoaded = null;
 
@@ -58,7 +58,7 @@ export class AngularMasonry implements OnInit, OnDestroy {
         // Initialize Masonry
         this._msnry = new masonry(this._element.nativeElement, this.options);
 
-        // console.log('AngularMasonry:', 'Initialized');
+        // console.log('AngularMasonryComponent:', 'Initialized');
 
         // Bind to events
         this._msnry.on('layoutComplete', (items: any) => {
@@ -80,7 +80,7 @@ export class AngularMasonry implements OnInit, OnDestroy {
             this._msnry.layout();
         });
 
-        // console.log('AngularMasonry:', 'Layout');
+        // console.log('AngularMasonryComponent:', 'Layout');
     }
 
     // public add(element: HTMLElement, prepend: boolean = false) {
@@ -117,7 +117,7 @@ export class AngularMasonry implements OnInit, OnDestroy {
             }
         }
 
-        // console.log('AngularMasonry:', 'Brick added');
+        // console.log('AngularMasonryComponent:', 'Brick added');
     }
 
     public remove(element: HTMLElement) {
@@ -127,6 +127,6 @@ export class AngularMasonry implements OnInit, OnDestroy {
         // Layout items
         this.layout();
 
-        // console.log('AngularMasonry:', 'Brick removed');
+        // console.log('AngularMasonryComponent:', 'Brick removed');
     }
 }
