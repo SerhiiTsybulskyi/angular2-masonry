@@ -51,7 +51,7 @@ export class AngularMasonryComponent implements OnInit, OnDestroy {
         }
 
         // Set element display to block
-        if (this._element.nativeElement.tagName === 'MASONRY') {
+        if (this._element.nativeElement.tagName === 'NGX-MASONRY') {
             this._element.nativeElement.style.display = 'block';
         }
 
