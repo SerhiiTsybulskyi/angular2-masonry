@@ -17,7 +17,7 @@ const masonry = require('masonry-layout');
 import { MasonryOptions } from './masonry-options';
 
 @Component({
-    selector: '[masonry], masonry',
+    selector: 'ngx-masonry',
     template: '<ng-content></ng-content>'
 })
 export class AngularMasonry implements OnInit, OnDestroy {
@@ -47,7 +47,7 @@ export class AngularMasonry implements OnInit, OnDestroy {
 
         // Set default itemSelector
         if (!this.options.itemSelector) {
-            this.options.itemSelector = '[masonry-brick], masonry-brick';
+            this.options.itemSelector = 'ngx-masonry-brick';
         }
 
         // Set element display to block

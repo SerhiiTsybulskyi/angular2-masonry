@@ -17,7 +17,7 @@ import {
 import { AngularMasonry } from './masonry';
 
 @Directive({
-    selector: '[masonry-brick], masonry-brick'
+    selector: 'ngx-masonry-brick'
 })
 export class AngularMasonryBrick implements OnDestroy, AfterViewInit {
 
