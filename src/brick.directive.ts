@@ -19,7 +19,7 @@ import { AngularMasonryComponent } from './masonry.component';
 @Directive({
     selector: 'ngx-masonry-brick'
 })
-export class AngularMasonryBrickComponent implements OnDestroy, AfterViewInit {
+export class AngularMasonryBrickDirective implements OnDestroy, AfterViewInit {
 
     constructor(private _element: ElementRef,
                 @Inject(forwardRef(() => AngularMasonryComponent))
